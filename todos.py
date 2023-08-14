@@ -74,7 +74,9 @@ def done(task_index):
         except:
             print(Fore.RED + "Todo doesn't exist")
     print(Fore.GREEN + "Todo marked as Done !")
-    
+
+
+''' Display the list of completed tasks. '''
 def show_done_task_list():
     print("\n")
     print(Fore.BLUE + "Completed Todos")
@@ -87,7 +89,9 @@ def show_done_task_list():
                 print(Fore.GREEN + displayed_task)
         except:
             print(Fore.RED + "List is Empty !")
-    
+
+
+''' Display the list of active (unfinished) tasks. '''
 def show_task_list():
     print("\n")
     print(Fore.BLUE + "Active Todos")
