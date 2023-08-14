@@ -11,10 +11,10 @@ def help():
           Use following commands to perform actions:
     \n
     1. List all todos                   python todos.py ls
-    2. Add a new todo                   python todos.py add "Task_Name"
-    3. Delete a todo                    python todos.py delete "Task_Index"
-    4. Mark a todo as done              python todos.py done "Task_Index"
-    5. Show all the completed todos     python todos.py ls_done "Task_Index"
+    2. Add a new todo                   python todos.py add "Todo_Name"
+    3. Delete a todo                    python todos.py delete "Todo_Index"
+    4. Mark a todo as done              python todos.py done "Todo_Index"
+    5. Show all the completed todos     python todos.py ls_done "Todo_Index"
 ''')
     
 def _write_to_todos_file(tasks):
@@ -46,7 +46,7 @@ def add(task):
     with open("todos.json","w") as file:
         json.dump(tasks,file,indent=4)
 
-    print("Task added successfully")
+    print(Fore.GREEN + "Todo added successfully !")
 
 def delete(task_index):
     with open("todos.json","r") as file:
@@ -57,8 +57,8 @@ def delete(task_index):
 
             _write_to_todos_file(tasks)
         except:
-            print(Fore.RED + "Task doesn't exist")
-    print(Fore.GREEN + "Task deleted successfully !")
+            print(Fore.RED + "Todo doesn't exist")
+    print(Fore.GREEN + "Todo deleted successfully !")
 
 def done(task_index):
     with open("todos.json","r") as file:
@@ -72,8 +72,8 @@ def done(task_index):
             _write_to_todos_file(tasks)
             _write_to_done_file(deleted_task)
         except:
-            print(Fore.RED + "Task doesn't exist")
-    print(Fore.GREEN + "Task marked as Done !")
+            print(Fore.RED + "Todo doesn't exist")
+    print(Fore.GREEN + "Todo marked as Done !")
     
 def show_done_task_list():
     print("\n")
