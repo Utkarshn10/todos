@@ -1,6 +1,6 @@
 # todos
 
-A todo list app in your cli.
+A todo list app for your cli written in python.
 
 ## Installation
 1. Create a virtual environment
