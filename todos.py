@@ -29,13 +29,14 @@ def _write_to_done_file(done_task):
         except:
             pass
     tasks_in_done_list.append(done_task)
-    print(tasks_in_done_list)
     with open("done.json","w") as file:
         json.dump(tasks_in_done_list,file,indent=4)
     
 def add(task):
     tasks = []
     task_data = " ".join(map(str,task))
+
+    
     with open("todos.json","r") as file:
         try:
             tasks = json.load(file)
@@ -43,8 +44,7 @@ def add(task):
         except: 
             tasks.append(task_data)    
 
-    with open("todos.json","w") as file:
-        json.dump(tasks,file,indent=4)
+    _write_to_todos_file(tasks)
 
     print(Fore.GREEN + "Todo added successfully !")
 
