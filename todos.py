@@ -93,10 +93,14 @@ def show_task_list():
     print(Fore.BLUE + "Active Todos")
     print("\n")
     with open("todos.json","r") as file:
-        tasks = json.load(file)
-        for index,task in enumerate(tasks):
-            displayed_task = str(index+1)+". "+task
-            print(Fore.GREEN + displayed_task)    
+        try:
+            tasks = json.load(file)
+            for index,task in enumerate(tasks):
+                displayed_task = str(index+1)+". "+task
+                print(Fore.GREEN + displayed_task)    
+        except:
+            print(Fore.RED + "List is Empty !")
+            
     
    
 if __name__ == '__main__':
