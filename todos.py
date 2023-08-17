@@ -12,7 +12,7 @@ def help():
     \n
     1. List all todos                   python todos.py ls
     2. Add a new todo                   python todos.py add "Todo_Name"
-    3. Delete a todo                    python todos.py delete "Todo_Index"
+    3. Delete a todo                    python todos.py rm "Todo_Index"
     4. Mark a todo as done              python todos.py done "Todo_Index"
     5. Show all the completed todos     python todos.py ls_done "Todo_Index"
 ''')
@@ -123,7 +123,7 @@ if __name__ == '__main__':
         task = args[2:]
         add(task)
 
-    elif command == 'delete':
+    elif command == 'rm':
         task_index = args[2]
         delete(task_index)
 
