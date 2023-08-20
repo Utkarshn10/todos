@@ -101,8 +101,10 @@ def show_task_list():
         except:
             print(Fore.RED + "List is Empty !")
             
-    
-   
+def update(task_index,updated_task):
+    with open("todos.json") as file:
+        delete(task_index)
+        add(updated_task)
 if __name__ == '__main__':
     args = sys.argv
     if len(args) < 2:
@@ -130,6 +132,11 @@ if __name__ == '__main__':
     elif command == 'done':
         task_index = args[2]
         done(task_index)
+
+    elif command == 'update':
+        task_index = args[2]
+        updated_task = args[3:]
+        update(task_index,updated_task)
 
     elif command == 'help':
         help()
