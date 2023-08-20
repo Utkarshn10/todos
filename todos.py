@@ -13,6 +13,7 @@ def help():
     1. List all todos                   python todos.py ls
     2. Add a new todo                   python todos.py add "Todo_Name"
     3. Delete a todo                    python todos.py rm "Todo_Index"
+    3. Update a todo                    python todos.py update "Todo_Index" new_todo
     4. Mark a todo as done              python todos.py done "Todo_Index"
     5. Show all the completed todos     python todos.py ls_done "Todo_Index"
 ''')
