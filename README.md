@@ -10,5 +10,5 @@ A todo list app for your cli written in python.
    - `python todos.py help`
 
 
+<img width="471" alt="image" src="https://github.com/Utkarshn10/todos/assets/58587256/5495fa13-968c-488b-9d42-9eb10926cb2b">
 
-![image](https://github.com/Utkarshn10/todos/assets/58587256/3675938e-1e72-4d6f-9f25-c86ea38ecf0f)
