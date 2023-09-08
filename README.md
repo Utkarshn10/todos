@@ -1,6 +1,6 @@
 # todos
 
-A todo list app for your cli written in python.
+A todo list app for your terminal, written in python.
 
 ## Installation
 1. Fork and clone the repository in your local machine
